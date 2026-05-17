@@ -1,0 +1,36 @@
+name: frontend_flutter
+description: "Deteksi Kelayakan Sawit"  # UBAH DESKRIPSI
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
+  image_picker: ^1.1.2
+  tflite_flutter: ^0.11.0  
+  image: ^4.0.17
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.14.4
+
+# TAMBAHKAN KONFIGURASI ICON
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_logo.png"  # Logo utama 1024x1024
+  adaptive_icon_background: "#4CAF50"      # Warna background (hijau untuk sawit)
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/model_sawit_final_224.tflite
+    - assets/icons/ # TAMBAHKAN FOLDER ICONS
